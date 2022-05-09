@@ -25,4 +25,28 @@ int main(void) {
 
 	nevim[3] = 'X';
 	printf("%s\n", nevim);
+	printf("delka retezce: %d\n", strlen(nevim));
+
+	printf("\n");
+
+	//spojovani retezcu
+	char raz[] = "prvni";
+	char dva[] = "druhy";
+	char spojeny[11];
+	strcat(spojeny, raz);
+	strcat(spojeny, dva);
+	printf("%s\n", spojeny);
+	char dlouhy[20] = "prvni";
+	strcat(dlouhy, dva);
+	printf("%s\n", dlouhy);
+
+	strcpy(dlouhy, raz);
+	printf("%s\n", dlouhy);
+
+	char* p;
+	p = strchr(text, 'Z');
+	if (p != NULL)
+		printf("%s\n", p);
+	else
+		printf("nenalezeno");
 }
